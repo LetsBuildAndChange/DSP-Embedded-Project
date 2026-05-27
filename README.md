@@ -1,29 +1,28 @@
 # Real-Time Embedded Audio Signal Processing System on Raspberry Pi
 
-## Overview
+## Project Overview
 
-This project is a real-time embedded audio signal processing system built on a Raspberry Pi using C++. The system captures live audio from a USB microphone, processes fixed-size audio blocks, computes signal metrics such as RMS volume, performs FFT-based frequency analysis, and measures processing time to evaluate real-time performance.
+This project is a real-time embedded audio signal processing system built on a Raspberry Pi using C++.
 
-The purpose of this project is to demonstrate embedded software design, DSP fundamentals, hardware/software integration, and real-time system thinking in a way that is relevant to aerospace, defense, embedded systems, and DSP software roles.
+The goal is to capture live audio from a USB microphone, process the signal in real time, measure timing behavior, and eventually add DSP features such as FFT-based frequency detection, filtering, event detection, and embedded hardware outputs.
 
-This is not intended to be only an audio visualization project. The final goal is to build a complete embedded DSP pipeline with acquisition, buffering, frequency-domain analysis, filtering, event detection, and measured timing behavior.
+This project is intended to demonstrate embedded software design, DSP fundamentals, real-time thinking, Linux audio programming, and clean C++ system architecture.
 
 ---
 
-## Project Goals
+## System Goal
 
-The system is designed to demonstrate:
+Build a real-time audio pipeline that can:
 
-- Live audio capture from a USB microphone
-- Real-time block-based signal processing
-- RMS volume measurement
-- FFT-based frequency analysis
-- Dominant-frequency detection
-- Processing-time measurement
-- Real-time budget comparison
-- Clean C++ and CMake project structure
-- Embedded-style architecture with callback, buffer, and processing stages
-- Future support for digital filtering, event detection, and hardware outputs
+- Capture live audio from a USB microphone
+- Process audio in fixed-size blocks
+- Compute time-domain signal metrics such as RMS
+- Perform FFT-based frequency analysis
+- Detect dominant frequencies
+- Measure processing time against a real-time budget
+- Eventually support filtering, event detection, and hardware outputs
+
+The project is not just an audio graphing demo. The goal is to build and explain a real-time embedded DSP pipeline.
 
 ---
 
@@ -34,16 +33,18 @@ Current hardware:
 - Raspberry Pi 3 B+
 - Raspberry Pi OS
 - USB microphone
-- MacBook for remote development over SSH
+- MacBook used for SSH / remote development
+- Official Raspberry Pi power supply
+- microSD card
 
-Optional future hardware:
+Optional future peripherals:
 
 - LEDs
 - LCD display
 - Buttons
 - ESP32 peripheral controller
 
-Current physical layout:
+Current physical setup:
 
 ```text
 USB Microphone → Raspberry Pi → Wi-Fi/SSH → MacBook
