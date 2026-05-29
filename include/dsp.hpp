@@ -1,7 +1,7 @@
 #ifndef DSP_HPP
 #define DSP_HPP
 
-void computeRMS(const void* inputBuffer, 
+void computeRMS(const float* samples, 
                 unsigned long frameCount, 
                 float &rms);
                 
